@@ -130,7 +130,7 @@ export function Experience() {
           {steps.map((s, i) => (
             <div
               key={s.n}
-              className="group relative bg-background p-8 md:p-10 transition-colors duration-700 hover:bg-accent/40"
+              className="group relative bg-background p-8 md:p-10 transition-all duration-700 hover:bg-accent/40 hover:-translate-y-1.5 hover:shadow-[0_12px_30px_-10px_rgba(200,165,100,0.1)]"
               style={{ animationDelay: `${0.1 * i}s` }}
             >
               <div className="font-display text-6xl text-gold/80 transition-transform duration-[1200ms] group-hover:-translate-y-1">
@@ -266,7 +266,7 @@ export function Reviews() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto">
           <p className="eyebrow flex items-center justify-center gap-2">
-            Google Reviews <span className="text-gold">★ 4.9 Rating (93 reviews)</span>
+            Google Reviews <span className="text-gold pulse-gold inline-block font-semibold">★ 4.9 Rating (93 reviews)</span>
           </p>
           <h2 className="font-display mt-6 text-5xl leading-[1] md:text-6xl">
             <em className="italic text-gold">Voices</em> of our happy customers.
@@ -277,7 +277,7 @@ export function Reviews() {
           {reviews.map((r, i) => (
             <blockquote
               key={r.who}
-              className="group relative border border-border/70 p-8 md:p-12 transition-all duration-700 hover:border-gold/60"
+              className="group relative border border-border/70 p-8 md:p-12 hover-lift transition-all duration-700 hover:border-gold/60 bg-card/30"
             >
               <span className="absolute -top-6 left-8 font-display text-8xl text-gold/60 leading-none select-none">
                 “

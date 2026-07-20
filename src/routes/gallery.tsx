@@ -102,7 +102,7 @@ function Gallery() {
               <Dialog key={p.src + i}>
                 <DialogTrigger asChild>
                   <figure
-                    className="group relative mb-4 md:mb-6 break-inside-avoid overflow-hidden bg-card cursor-pointer"
+                    className="group relative mb-4 md:mb-6 break-inside-avoid overflow-hidden bg-card cursor-pointer hover-lift rounded-sm"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
                     <img
