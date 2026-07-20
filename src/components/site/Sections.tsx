@@ -8,6 +8,7 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
+import { MapPin, ExternalLink } from "lucide-react";
 import designerImg from "@/assets/designer.jpg";
 import s1 from "@/assets/sample-1.png";
 import s2 from "@/assets/sample-2.jpg";
@@ -322,12 +323,33 @@ export function Contact() {
 
           <dl className="space-y-8 text-sm max-w-2xl flex flex-col items-center">
             <div>
-              <dt className="eyebrow">The Atelier</dt>
+              <dt className="eyebrow flex items-center justify-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-gold" /> The Atelier Location
+              </dt>
               <dd className="mt-3 font-display text-xl italic">
-                No. 11 Sabaapathi Street K.K.Pudur Sai Baba Colony
-                <br />
-                Coimbatore, Tamil Nadu 641038.
+                <a
+                  href="https://maps.app.goo.gl/uNioreCHJkL43r889"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors duration-500"
+                >
+                  No. 11 Sabaapathi Street K.K.Pudur Sai Baba Colony
+                  <br />
+                  Coimbatore, Tamil Nadu 641038.
+                </a>
               </dd>
+              <div className="mt-4">
+                <a
+                  href="https://maps.app.goo.gl/uNioreCHJkL43r889"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/40 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-obsidian transition-all duration-500 shadow-sm"
+                >
+                  <MapPin className="w-3.5 h-3.5" />
+                  Open in Google Maps
+                  <ExternalLink className="w-3 h-3 opacity-70" />
+                </a>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-12 w-full max-w-md">
               <div>
@@ -359,6 +381,20 @@ export function Contact() {
               </dd>
             </div>
           </dl>
+
+          {/* Embedded Google Map */}
+          <div className="mt-14 w-full max-w-4xl overflow-hidden rounded-xl border border-border/70 shadow-2xl bg-card/40">
+            <iframe
+              title="Trendy Ladies Designer Location Map"
+              src="https://maps.google.com/maps?q=Trendy%20Ladies%20Designer%20No.%2011%20Sabaapathi%20Street%20K.K.Pudur%20Sai%20Baba%20Colony%20Coimbatore%20641038&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0, filter: "contrast(1.05) saturate(0.9)" }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </div>
     </section>
